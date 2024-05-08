@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+////////////////////////////////////////////////////////////////////////
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Шапка сайта */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Логотип и название сайта */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    /* Размер иконки сайта */
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 1.2rem;
+}
+
+/* Меню */
+.menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-list li {
+    margin-right: 20px;
+}
+
+.menu-list li:last-child {
+    margin-right: 0;
+}
+
+.menu-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Бургер меню */
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.burger-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+}
+
+.burger-icon::before,
+.burger-icon::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.burger-icon::before {
+    top: -8px;
+}
+
+.burger-icon::after {
+    bottom: -8px;
+}
+
+/* Медиа-запрос для бургер меню */
+@media screen and (max-width: 1200px) {
+    .menu-list {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+/* Стиль для активного меню */
+.menu-list.is-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    /* Відрегулюйте відповідно до вашої шапки */
+    background-color: #333;
+    width: 100%;
+    /* Повна ширина на малих екранах */
+    padding: 10px 0;
+}
+
+.menu-list.is-active li {
+    margin: 10px 20px;
+}
+
+.main-banner {
+    width: 100%;
+    height: 100%;
+    /* Висота може змінюватися в залежності від вашого дизайну */
+    background-size: cover;
+    background-position: center;
+    padding-left: 35%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-banner {
+        height: 900px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 90px;
+    }
+}

@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Шапка сайта */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Логотип и название сайта */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    /* Размер иконки сайта */
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 1.2rem;
+}
+
+/* Меню */
+.menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-list li {
+    margin-right: 20px;
+}
+
+.menu-list li:last-child {
+    margin-right: 0;
+}
+
+.menu-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Бургер меню */
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.burger-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+}
+
+.burger-icon::before,
+.burger-icon::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.burger-icon::before {
+    top: -8px;
+}
+
+.burger-icon::after {
+    bottom: -8px;
+}
+
+/* Медиа-запрос для бургер меню */
+@media screen and (max-width: 1200px) {
+    .menu-list {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+/* Стиль для активного меню */
+.menu-list.is-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    /* Відрегулюйте відповідно до вашої шапки */
+    background-color: #333;
+    width: 100%;
+    /* Повна ширина на малих екранах */
+    padding: 10px 0;
+}
+
+.menu-list.is-active li {
+    margin: 10px 20px;
+}
+
+.gameplay-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 54px;
+    margin: 0px;
+}
+
+.description,
+.video {
+    width: 100%;
+    padding: 15px;
+}
+
+.video iframe {
+    width: 100%;
+    height: 300px;
+    /* Приклад висоти, можна налаштовувати */
+}
+
+/* Адаптація для екранів шириною менше 1200px */
+@media (max-width: 1200px) {
+
+    .description,
+    .video {
+        padding: 10px;
+    }
+
+    .video iframe {
+        height: auto;
+        /* Зменшуємо висоту іфрейму для кращого відображення */
+    }
+
+    h1 {
+        font-size: 20px;
+        /* Зменшуємо розмір шрифту для заголовка */
+    }
+}
+
+.main-block {
+    display: flex;
+    background-color: #fff;
+}
+
+.main-banner {
+    width: 100%;
+    height: 100%;
+    /* Висота може змінюватися в залежності від вашого дизайну */
+    background-size: cover;
+    background-position: center;
+}
