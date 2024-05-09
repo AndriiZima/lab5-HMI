@@ -113,69 +113,40 @@ body {
     margin: 10px 20px;
 }
 
-.gameplay-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-h1 {
-    text-align: center;
-    font-size: 54px;
-    margin: 0px;
-}
-
-.description,
-.video {
-    width: 100%;
-    padding: 15px;
-}
-
-.video iframe {
-    width: 100%;
-    height: 300px;
-    /* Приклад висоти, можна налаштовувати */
-}
-
-/* Адаптація для екранів шириною менше 1200px */
-@media (max-width: 1200px) {
-
-    .description,
-    .video {
-        padding: 10px;
-    }
-
-    .video iframe {
-        height: auto;
-        /* Зменшуємо висоту іфрейму для кращого відображення */
-    }
-
-    h1 {
-        font-size: 20px;
-        /* Зменшуємо розмір шрифту для заголовка */
-    }
-}
-
-.main-block {
-    display: flex;
+section.game-update {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
     background-color: #fff;
+    max-height: 800px;
 }
 
-.main-banner {
-    width: 100%;
+section.game-update img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.main_div {
+    display: flex;
     height: 100%;
-    /* Висота може змінюватися в залежності від вашого дизайну */
-    background-size: cover;
-    background-position: center;
 }
 
 @media (max-width: 576px) {
-    h1 {
-        font-size: 50px;
+    .main_div {
+        display: block;
     }
 
-    .main-block {
-        font-size: 20px;
-        height: 200px;
+    body {
+        background-image: url('/images/_131c44d6-9494-4a69-ac0e-5ad73a51a09e.jpg');
     }
 }
